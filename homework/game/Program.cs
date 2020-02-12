@@ -17,13 +17,12 @@ namespace Game
 
 
       Random rnd = new Random();
-      string[] computerChoices = { "Rock", "Paper", "Scissors" };   
+      string[] computerChoices = { "Rock", "Paper", "Scissors" };
       int fIndex = rnd.Next(computerChoices.Length);
       var computerChoice = computerChoices[fIndex];
 
-      Console.WriteLine("   Computer Choice:   {0}", computerChoice); 
+      Console.WriteLine("   Computer Choice:   {0}", computerChoice);
 
-  
       if (userChoice == "Rock" && computerChoice == "Rock") {
         Console.WriteLine("It was a tie!");
       }
@@ -54,9 +53,6 @@ namespace Game
       if (userChoice == "Scissors" && computerChoice == "Scissors") {
         Console.WriteLine("It was a tie!");
       }
-        
-      
-
 
     } 
 
