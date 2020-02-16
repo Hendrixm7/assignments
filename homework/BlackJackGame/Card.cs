@@ -14,14 +14,13 @@ namespace BlackJackGame {
 
         //Method
         public string DisplayCard () {
-            return $"{Rank} of {Suit}";
-
+            return $"{Rank}{Suit}";
         }
 
         public int GetCardValue () {
-            if (Rank == "ace") {
+            if (Rank == "A") {
                 return 11;
-            } else if (Rank == "queen" || Rank == "king" || Rank == "jack") {
+            } else if (Rank == "Q" || Rank == "K" || Rank == "J") {
                 return 10;
 
             }
