@@ -8,20 +8,23 @@ namespace BlackJackGame {
         public List<Card> cards = new List<Card> ();
         public int value {
             get {
-                int value = 0;
+                int total = 0;
 
                 for (int i = 0; i < cards.Count; i++) {
-                    value += cards[i].GetCardValue ();
-
+                    total += cards[i].GetCardValue ();
                 }
 
-                return value;
+                return total;
             }
         }
 
         //Method
         public void AddCard (Card card) {
             cards.Add (card);
+        }
+
+        public int AddTwo (int x) {
+            return x + 2;
         }
 
         public void DisplayHand () {

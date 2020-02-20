@@ -11,11 +11,14 @@ namespace BlackJackGame {
         // Constructor
         public Game () {
             deck.Shuffle ();
-
-            playerHand.AddCard (deck.DealCard ());
-            dealerHand.AddCard (deck.DealCard ());
-            playerHand.AddCard (deck.DealCard ());
-            dealerHand.AddCard (deck.DealCard ());
+            var tempcard = deck.DealCard ();
+            // Console.WriteLine ();
+            // playerHand.AddCard (tempcard);
+            Console.WriteLine (playerHand.AddTwo (7));
+            // playerHand.AddCard (deck.DealCard ());
+            // dealerHand.AddCard (deck.DealCard ());
+            // playerHand.AddCard (deck.DealCard ());
+            // dealerHand.AddCard (deck.DealCard ());
         }
 
         // Methods

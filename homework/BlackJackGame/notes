@@ -1,0 +1,11 @@
+get {
+                int value = 0;
+
+                for (int i = 0; i < cards.Count; i++) {
+                    value += cards[i].GetCardValue ();
+
+
+public void AddCard (Card card) {
+            cards.Add (card);
+
+            
