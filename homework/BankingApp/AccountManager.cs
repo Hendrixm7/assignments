@@ -5,14 +5,38 @@ using System.IO;
 using System.Linq;
 using CsvHelper;
 namespace BankingApp
+
 {
 
     public class AccountManager
     {
-        // public List<Account> accounts { get; set; } = new List<Account> ();
         public Account checking = new Account ();
         public Account savings = new Account ();
 
+        public StreamReader reader = new StreamReader ("accounts.csv");
+        public CsvReader csvReader;
+
+        public AccountManager ()
+        {
+
+            csvReader = new CsvReader (reader, CultureInfo.InvariantCulture);
+            var import = csvReader.GetRecords<Account> ().ToList ();
+
+            if (import.Count == 2)
+            {
+                checking = import[0];
+                savings = import[1];
+            }
+
+        }
+        public void ExportTransactions ()
+        {
+            StreamWriter writer = new StreamWriter ("accounts.csv");
+            var csvWriter = new CsvWriter (writer, CultureInfo.InvariantCulture);
+            var writable = new List<Account> () { checking, savings };
+            csvWriter.WriteRecords (writable);
+            writer.Flush ();
+        }
         public void DisplayAccount ()
         {
             Console.WriteLine ($"You have {checking.Amount} in your checking account.");
@@ -34,6 +58,7 @@ namespace BankingApp
                 savings.Amount += amount;
 
             }
+            ExportTransactions ();
         }
         public void Withdrawal (string accountType, int amount)
         {
@@ -51,6 +76,7 @@ namespace BankingApp
                 savings.Amount -= amount;
 
             }
+            ExportTransactions ();
 
         }
         public void Transfer (string accountType, int amount)
@@ -71,7 +97,7 @@ namespace BankingApp
                 checking.Amount -= amount;
 
             }
-
+            ExportTransactions ();
         }
     }
 }
