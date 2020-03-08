@@ -14,6 +14,7 @@ namespace allsmall.Controllers
     public class ItemController : ControllerBase
     {
         public DatabaseContext db { get; set; } = new DatabaseContext ();
+
         [HttpGet]
         public List<Item> GetAllItems ()
         {

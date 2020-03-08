@@ -8,6 +8,7 @@ namespace allsmall.Models
   public partial class DatabaseContext : DbContext
   {
     public DbSet<Item> Items { get; set; }
+    public DbSet<Location> Locations { get; set; }
 
     private string ConvertPostConnectionToConnectionString (string connection)
     {

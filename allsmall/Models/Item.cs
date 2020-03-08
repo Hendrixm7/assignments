@@ -15,7 +15,9 @@ namespace allsmall.Models
         public int NumberInStock { get; set; }
         public int Price { get; set; }
         public DateTime DateOrdered { get; set; } = DateTime.Now;
-        public List<Item> Items { get; set; } = new List<Item> ();
+        public int LocationId { get; set; }
+        public Location Location { get; set; }
+
     }
 
 }
