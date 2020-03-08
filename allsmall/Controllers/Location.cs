@@ -17,16 +17,17 @@ namespace allsmall.Controllers
         [HttpGet]
         public List<Location> GetAllLocations ()
         {
-            var Locations = db.Locations.OrderBy (m => m.Id);
+            var Locations = db.Location.OrderBy (m => m.Id);
             return Locations.ToList ();
         }
 
         [HttpPost ("add")]
         public Location AddLocation (Location location)
         {
-            db.Locations.Add (location);
+            db.Location.Add (location);
             db.SaveChanges ();
             return location;
+
         }
 
     }

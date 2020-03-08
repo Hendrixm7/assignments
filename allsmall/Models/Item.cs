@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using allsmall.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace allsmall.Models
 {
@@ -16,6 +16,8 @@ namespace allsmall.Models
         public int Price { get; set; }
         public DateTime DateOrdered { get; set; } = DateTime.Now;
         public int LocationId { get; set; }
+
+        [JsonIgnore]
         public Location Location { get; set; }
 
     }
