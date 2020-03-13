@@ -1,0 +1,171 @@
+:root {
+  font: 16px / 1 sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #fafbfc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgba(255, 255, 255, 0.75);
+  background-clip: padding-box;
+  box-shadow:  0.5rem 1.25rem rgba(0,0,0,.05); */
+}
+
+.icon {
+  height: 31px;
+  margin-top: 0.75rem;
+  margin-left: 1rem;
+}
+
+.left-side-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-right: 1rem;
+  padding-left: 0rem;
+  list-style: none;
+  font-weight: lighter;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  background-color: rgba(255, 255, 255);
+}
+
+.octodex {
+  padding-right: 0.8rem;
+}
+
+.faq {
+  padding-top: 1px !important;
+  padding-bottom: 16px !important;
+}
+
+.home {
+  padding-right: 14px;
+}
+.right-side-list {
+  display: flex;
+  margin: 1rem;
+  padding-left: 1rem;
+  margin-top: 0rem;
+  list-style: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.twitter {
+  font-weight: lighter;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+/* Grid CSS */
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container .grid-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.grid-item {
+  /* height: 550px; */
+  flex-basis: 20%;
+  width: 259px;
+  position: relative;
+  /* padding: 10px; */
+  /* box-sizing: border-box; */
+  padding: 0 8px;
+  margin-bottom: 40px;
+  margin-right: 33px;
+}
+
+.grid-item .avatar {
+  width: 100%;
+  padding: 8px;
+  padding-left: -2px;
+  margin-left: -6px;
+  margin-bottom: 16px;
+  background-color: #fff;
+  border-radius: 9px;
+  border: 1px solid #e1e4e8;
+}
+
+.info-box .cat-index {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+}
+
+.info-box .cat-name {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1333px) {
+  .grid-item {
+    flex-basis: 33.33%;
+  }
+}
+
+@media (max-width: 1073px) {
+  .grid-item {
+    flex-basis: 33.33%;
+  }
+}
+
+@media (max-width: 815px) {
+  .grid-item {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 555px) {
+  .grid-item {
+    flex-basis: 100%;
+  }
+}
+
+.grid-item .info-box {
+  display: flex;
+}
+
+.info-box .cat-index {
+  color: #586069;
+  padding-right: 4px;
+}
+
+.info-box .cat-name {
+  color: #24292e;
+  font-weight: 600;
+}
+
+.Image1 {
+  border-style: solid;
+  border-width: 0.5rem;
+  width: 10%;
+  height: 10%;
+}
+
+.Image2 {
+  width: 90%;
+  height: 90;
+  background-size: 100% 100%;
+  border: 1px solid;
+}
